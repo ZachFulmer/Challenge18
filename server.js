@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 app.use(require('./routes'));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/pizza-hunt-db', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/Challenge18-db', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
