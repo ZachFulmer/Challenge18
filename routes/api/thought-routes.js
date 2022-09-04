@@ -20,9 +20,13 @@ router.route('/:id')
   .put(updateThought)
   .delete(removeThought);
 
-// /api/comments/<pizzaId>/<commentId>
+// /api/thoughts/:thoughtId>/reactions
 router.route('/:thoughtId/reactions')
   .post(addReaction)
+  .delete(removeReaction);
+
+// /api/thoughts/:thoughtId>/reactions
+router.route('/:thoughtId/reactions/:reactionId')
   .delete(removeReaction);
 
 module.exports = router;
